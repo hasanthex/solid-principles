@@ -13,7 +13,7 @@ class Score {
             logger.success()
         }else if(this.currentRun == this.targetRun){
             const logger = new Logger('Match Result : Draw ')
-            logger.success()
+            logger.success() 
         }else if(this.currentRun < this.targetRun){
             let need_run = parseInt(this.targetRun - this.currentRun);
             const logger = new Logger(`You Need ${need_run} More Runs to Win.`)
