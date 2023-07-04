@@ -1,5 +1,5 @@
 function anOver(over){
-    
+
     let total_run = 0
 
     over.map(score => {
@@ -19,18 +19,23 @@ function anOver(over){
             case 6:
                     total_run = total_run + score;
                     break;
-            case 'WD':
-                total_run = total_run + 1;
-                break;
-            case 'NB':
-                total_run = total_run + 1;
-                break;
+
         }
     })
 
-    console.log(total_run)
+    return total_run;
 }
 
-const balls = [4, 0, 1, 6, 0, 'WD', 'NB']
+const over_1 = [4, 0, 1, 6, 0, 2, 0]; // its ok for now
+let runs = anOver(over_1);
+console.log(`1st Over Run Taken : ${runs}`);
 
-anOver(balls)
+/**
+* After some times, we need to add WD(Wide) and NB(No Ball) options too.
+* for solve issues, we can add two more switch-case or if-else conditions.
+* Here violates Open-Closed Principle when we added switch-case or if-else conditions.
+*/
+
+const over_2 = [4, 0, 1, 4, 0, 'WD', 'NB', 1];
+runs = anOver(over_2);
+console.log(`2nd Over Run Taken : ${runs}`);
