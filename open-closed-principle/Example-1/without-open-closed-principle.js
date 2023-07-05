@@ -17,8 +17,8 @@ function anOver(over){
                 total_run = total_run + score;
                 break;
             case 6:
-                    total_run = total_run + score;
-                    break;
+                total_run = total_run + score;
+                break;
 
         }
     })
@@ -31,11 +31,15 @@ let runs = anOver(over_1);
 console.log(`1st Over Run Taken : ${runs}`);
 
 /**
-* After some times, we need to add WD(Wide) and NB(No Ball) options too.
-* for solve issues, we can add two more switch-case or if-else conditions.
-* Here violates Open-Closed Principle when we added switch-case or if-else conditions.
+* LET'S THINK
+*
+* After some times, came some changes.
+* Changes is we have to add more options to our function.
+* We need to add WD(Wide) and NB(No Ball) options too.
+* For solve this problem we can add two switch statement and here is violate the Open-closed principle.
+* Because Open-Closed Principle is Open for extension and Closed for modification.
+* Here we modified our existing method (anOver) which broke the open-closed principle.
 */
-
 const over_2 = [4, 0, 1, 4, 0, 'WD', 'NB', 1];
 runs = anOver(over_2);
 console.log(`2nd Over Run Taken : ${runs}`);
