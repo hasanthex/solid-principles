@@ -26,7 +26,7 @@ function anOver(over){
     return total_run;
 }
 
-const over_1 = [4, 0, 1, 6, 0, 2, 0]; // its ok for now
+const over_1 = [4, 0, 1, 6, 0, 2]; // its ok for now
 let runs = anOver(over_1);
 console.log(`1st Over Run Taken : ${runs}`);
 
